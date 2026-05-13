@@ -19,6 +19,7 @@ exec > >(tee -i -a "$logfile") 2> >(tee -i -a "$logfile" >&2)
 echo "Running test with user $(whoami)"
 
 set +e
+set -x
 
 # If there's a configuration for the assignment number, use this to look for
 # additional tests
